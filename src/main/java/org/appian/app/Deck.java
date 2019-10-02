@@ -8,10 +8,7 @@ import org.apache.log4j.Logger;
 
 
 public class Deck implements IDeck {
-	List<ICard> deck;
-	ISuit[] suits;
-	IRank[] ranks;
-	int size;
+	protected List<ICard> deck;
 	private static final Logger logger = LogManager.getLogger(Deck.class);
 	public void shuffle() {
 		Random random = new Random();
@@ -32,8 +29,7 @@ public class Deck implements IDeck {
 
 	public ICard pullCard() {
 		if(deck.isEmpty()) {
-			logger.error("The Deck is empty. Cannot Pull any card.");
-			return null;
+			throw new  IllegalStateException("Deck of cards is empty!!");
 		}
 		ICard pulledCard = deck.get(0);
 		deck.remove(0);

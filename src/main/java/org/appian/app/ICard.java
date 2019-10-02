@@ -9,11 +9,11 @@ public interface ICard {
 	 *  @returns : An object of type Rank
 	 *  The function returns the Rank of the Card
 	 */
-	IRank getRank();
+	Rank getRank();
 	/*
 	 * @returns : An object of type Suit
 	 * The function returns the Suit of the card
 	 */
-	ISuit getSuit();
+	Suit getSuit();
 
 }

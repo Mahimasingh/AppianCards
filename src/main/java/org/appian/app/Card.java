@@ -1,19 +1,20 @@
 package org.appian.app;
 
+import java.util.Objects;
 
 public class Card implements ICard {
-	IRank cardRank; // Refers to rank of the card
-	ISuit cardSuit; // refers to suit of the card
+	Rank cardRank; // Refers to rank of the card
+	Suit cardSuit; // refers to suit of the card
 	
-	public Card(IRank rank, ISuit suit) {
+	public Card(Rank rank, Suit suit) {
 		this.cardRank = rank;
 		this.cardSuit = suit;
 	}
-	public IRank getRank() {
+	public Rank getRank() {
 		return this.cardRank;
 	}
 
-	public ISuit getSuit() {
+	public Suit getSuit() {
 		return this.cardSuit;
 	}
 	
@@ -28,6 +29,11 @@ public class Card implements ICard {
 		final ICard c = (ICard) obj;
 		return (c.getRank().equals(this.getRank()) && c.getSuit().equals(this.getSuit()));
 			
+	}
+	
+	@Override
+	public int hashCode() {
+		return Objects.hash(this.cardRank,this.cardSuit);
 	}
 
 }

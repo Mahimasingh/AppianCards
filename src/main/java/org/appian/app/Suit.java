@@ -1,44 +1,27 @@
 package org.appian.app;
 
-import java.util.Objects;
-public class Suit implements ISuit {
-	private final  String name; // refers to string name of Suit
-	private final char symbol; //refers to symbol of the suit
+public enum Suit {
 	
-	public Suit(String name, char symbol) {
-		this.name = name;
-		this.symbol = symbol;
-	}
-	public String getName() {
-		return this.name;
+	
+	CLUBS ("Clubs", '\u2663'),
+	DIAMONDS ("Diamonds", '\u2666'),
+	HEARTS ("Hearts", '\u2764'),
+	SPADES ("Spades", '\u2660');
+	
+	public String getSuitName() {
+		return suitName;
 	}
 
-	public char getSymbol() {
-		return this.symbol;
+	public char getSuitSymbol() {
+		return suitSymbol;
 	}
+
+	private final String suitName;
+	private final char suitSymbol;
 	
-	/*
-	 * (non-Javadoc)
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-    public boolean equals(Object obj) {
-		if (obj == null) {
-            return false;
-        }
-		if (!Suit.class.isAssignableFrom(obj.getClass())) {
-            return false;
-        }
-		final ISuit s = (ISuit) obj;
-		return (s.getName().equals(this.getName()) && s.getSymbol() ==this.getSymbol());
+	Suit(String suitName, char suitSymbol){
+		this.suitName = suitName;
+		this.suitSymbol = suitSymbol;
 	}
-	/*
-	 * (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
-	@Override
-	public int hashCode() {
-        return Objects.hash(name,symbol);
-    }
 
 }

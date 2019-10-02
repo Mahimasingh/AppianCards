@@ -1,48 +1,35 @@
 package org.appian.app;
 
-import java.util.Objects;
-
-public class Rank implements IRank {
+public enum Rank {
 	
-	private final String rankName; // refers to name of the rank
-	private final int pips; // refers to the number of pips 
-	private final char initials; // a short name of Rank
+	TWO(2,"Two"),
+	THREE(3,"Three"),
+	FOUR(4,"Four"),
+	FIVE(5,"Five"),
+	SIX(6,"Six"),
+	SEVEN(7,"Seven"),
+	EIGHT(8,"Eight"),
+	NINE(9,"Nine"),
+	TEN(10,"Ten"),
+	JACK(0,"Jack"),
+	QUEEN(0,"Queen"),
+	KING(0,"King"),
+	ACE(0,"Ace");
 	
-	public Rank(String name, int pips, char initials) {
-		this.rankName = name;
-		this.pips = pips;
-		this.initials = initials;
+	public int getPips() {
+		return pips;
 	}
 
 	public String getName() {
-		return this.rankName;
+		return name;
 	}
 
-	public int getPips() {
-		return this.pips;
-	}
-
-	public char getShortName() {
-		return this.initials;
-	}
+	private final int pips;
+	private final String name;
 	
-	@Override
-    public boolean equals(Object obj) {
-		if (obj == null) {
-            return false;
-        }
-		if (!Rank.class.isAssignableFrom(obj.getClass())) {
-            return false;
-        }
-		final IRank r = (IRank) obj;
-		return (r.getName().equals(this.getName()) && r.getPips() == this.getPips());
-			
+	Rank(int pips, String name){
+		this.pips = pips;
+		this.name = name;
 	}
-	
-	@Override
-	public int hashCode() {
-        return Objects.hash(rankName,pips);
-    }
-
 
 }
