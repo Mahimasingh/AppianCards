@@ -1,3 +1,4 @@
+package org.appian.app;
 import static org.junit.Assert.*;
 
 import java.util.List;
@@ -8,12 +9,10 @@ import org.junit.Test;
 public class StandardDeckTest {
 	
 	@Test
-	public void testCards() {
+	public void testCardShuffle() {
 		StandardDeck deck = new StandardDeck();
-		List<ICard> cards = deck.getCards();
-		printCards(cards);
+		printCards(deck.getCards());
 		deck.shuffle();
-		System.out.println("After Shuffle");
 		printCards(deck.getCards());
 		
 	}
@@ -23,6 +22,13 @@ public class StandardDeckTest {
 			System.out.println(card.getRank().getName()+card.getSuit().getSuitSymbol());
 		}
 	}
+	
+	@Test
+	public void testCardPull() {
+		StandardDeck deck = new StandardDeck();
+		assertNotEquals(deck.dealOneCard(),deck.dealOneCard());
+	}
+	
 	
 
 }

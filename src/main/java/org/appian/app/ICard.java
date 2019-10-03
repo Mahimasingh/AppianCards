@@ -1,4 +1,5 @@
 package org.appian.app;
+
 /*
  * @author : Mahima Singh
  * Interface defines an abstract view of Card
@@ -6,14 +7,18 @@ package org.appian.app;
 public interface ICard {
 	
 	/*
-	 *  @returns : An object of type Rank
+	 *  @returns : Enum type Rank
 	 *  The function returns the Rank of the Card
 	 */
 	Rank getRank();
 	/*
-	 * @returns : An object of type Suit
+	 * @returns : Enum type Suit
 	 * The function returns the Suit of the card
 	 */
 	Suit getSuit();
+	/*
+	 * @returns : String representation of card
+	 */
+	String getStringRepresentation();
 
 }

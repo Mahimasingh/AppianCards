@@ -3,13 +3,9 @@ package org.appian.app;
 import java.util.List;
 import java.util.Random;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-
 
 public class Deck implements IDeck {
 	protected List<ICard> deck;
-	private static final Logger logger = LogManager.getLogger(Deck.class);
 	public void shuffle() {
 		Random random = new Random();
 		int index;
@@ -27,13 +23,12 @@ public class Deck implements IDeck {
 		
 	}
 
-	public ICard pullCard() {
+	public ICard dealOneCard() {
 		if(deck.isEmpty()) {
 			throw new  IllegalStateException("Deck of cards is empty!!");
 		}
 		ICard pulledCard = deck.get(0);
 		deck.remove(0);
-		logger.info("Successfully Pulled first Card from Deck.");
 		return pulledCard;
 	}
 

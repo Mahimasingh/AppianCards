@@ -16,7 +16,7 @@ public interface IDeck {
 	 * @returns : An object of type Card
 	 * The function pulls the first card from the deck
 	 */
-	ICard pullCard();
+	ICard dealOneCard();
 	
 	/*
 	 * @returns : List<Cards
