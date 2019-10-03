@@ -19,7 +19,7 @@ public interface IDeck {
 	ICard dealOneCard();
 	
 	/*
-	 * @returns : List<Cards
+	 * @returns : A list of cards
 	 * This method returns the list of cards in the deck.
 	 */
 	List<ICard> getCards();

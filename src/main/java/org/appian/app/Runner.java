@@ -3,7 +3,10 @@ package org.appian.app;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
-
+/*
+ * Runner class contains the main method to invoke the application.
+ * How to invoke : java -jar Assignment-0.0.1-SNAPSHOT.jar org.appian.app.Runner
+ */
 public class Runner {
 	
 	private static void printCards(List<ICard> deck) {
@@ -12,10 +15,9 @@ public class Runner {
 		}
 	public static void main(String[] args) {
 		System.out.println("Press 1 to see contents of deck"+"\nPress 2 to deal one card"+"\nPress 3 to shuffle \n Press 4 to exit");
-		Scanner scanner = new Scanner(System.in);
 		int input = 0;
 		StandardDeck deck = new StandardDeck();
-		try { 
+		try(Scanner scanner = new Scanner(System.in)) { 
 		do {
 			input = scanner.nextInt();
 			switch(input) {

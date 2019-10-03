@@ -1,7 +1,9 @@
 package org.appian.app;
 
 import java.util.Objects;
-
+/*
+ * Class Card implements interface ICard
+ */
 public class Card implements ICard {
 	Rank cardRank; // Refers to rank of the card
 	Suit cardSuit; // refers to suit of the card

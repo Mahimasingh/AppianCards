@@ -1,5 +1,7 @@
 package org.appian.app;
-
+/*
+ * Enum Suit represents suits of card
+ */
 public enum Suit {
 	
 	

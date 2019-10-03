@@ -2,7 +2,9 @@ package org.appian.app;
 
 import java.util.List;
 import java.util.Random;
-
+/*
+ * Class Deck implements the interface IDeck
+ */
 
 public class Deck implements IDeck {
 	protected List<ICard> deck;

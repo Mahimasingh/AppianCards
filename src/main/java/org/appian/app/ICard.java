@@ -1,7 +1,7 @@
 package org.appian.app;
 
 /*
- * @author : Mahima Singh
+ *
  * Interface defines an abstract view of Card
  */
 public interface ICard {
