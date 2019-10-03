@@ -18,8 +18,8 @@ public enum Suit {
 		return suitSymbol;
 	}
 
-	private final String suitName;
-	private final char suitSymbol;
+	private final String suitName; // Name of the suit
+	private final char suitSymbol; // Symbol of the suit
 	
 	Suit(String suitName, char suitSymbol){
 		this.suitName = suitName;

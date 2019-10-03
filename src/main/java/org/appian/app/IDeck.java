@@ -2,7 +2,7 @@ package org.appian.app;
 import java.util.List;
 
 /*
- * @author : Mahima Singh
+ * 
  * This interface provides an abstract view of Deck
  */
 public interface IDeck {

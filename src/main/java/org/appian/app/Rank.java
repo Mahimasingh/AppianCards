@@ -1,5 +1,8 @@
 package org.appian.app;
-
+/*
+ * Rank enumeration refers to rank of the card in a standard deck.
+ * 
+ */
 public enum Rank {
 	
 	TWO(2,"Two"),
@@ -24,8 +27,8 @@ public enum Rank {
 		return name;
 	}
 
-	private final int pips;
-	private final String name;
+	private final int pips; //Number of symbols on a playing card that denote its suit and value.
+	private final String name; //Name of Rank
 	
 	Rank(int pips, String name){
 		this.pips = pips;
