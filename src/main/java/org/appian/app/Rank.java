@@ -14,24 +14,24 @@ public enum Rank {
 	EIGHT(8,"Eight"),
 	NINE(9,"Nine"),
 	TEN(10,"Ten"),
-	JACK(0,"Jack"),
-	QUEEN(0,"Queen"),
-	KING(0,"King"),
-	ACE(0,"Ace");
+	JACK(11,"Jack"),
+	QUEEN(12,"Queen"),
+	KING(13,"King"),
+	ACE(1,"Ace");
 	
-	public int getPips() {
-		return pips;
+	public int getValue() {
+		return value;
 	}
 
 	public String getName() {
 		return name;
 	}
 
-	private final int pips; //Number of symbols on a playing card that denote its suit and value.
+	private final int value; //Refers to the value of rank
 	private final String name; //Name of Rank
 	
-	Rank(int pips, String name){
-		this.pips = pips;
+	Rank(int value, String name){
+		this.value = value;
 		this.name = name;
 	}
 

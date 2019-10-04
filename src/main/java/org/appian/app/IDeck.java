@@ -14,7 +14,8 @@ public interface IDeck {
 	
 	/*
 	 * @returns : An object of type Card
-	 * The function pulls the first card from the deck
+	 * @throws : Illegal State Exception when deck is empty
+	 * The function pulls the first card from the deck.
 	 */
 	ICard dealOneCard();
 	

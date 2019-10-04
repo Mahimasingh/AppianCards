@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 /*
  * Runner class contains the main method to invoke the application.
- * How to invoke : java -jar Assignment-0.0.1-SNAPSHOT.jar org.appian.app.Runner
+ * How to invoke : java -jar Cards-1.0.jar org.appian.app.Runner
  */
 public class Runner {
 	
@@ -14,7 +14,7 @@ public class Runner {
 			System.out.println(card.getStringRepresentation());
 		}
 	public static void main(String[] args) {
-		System.out.println("Press 1 to see contents of deck"+"\nPress 2 to deal one card"+"\nPress 3 to shuffle \n Press 4 to exit");
+		System.out.println("Press 1 to see contents of deck"+"\nPress 2 to deal one card"+"\nPress 3 to shuffle \nPress 4 to exit");
 		int input = 0;
 		StandardDeck deck = new StandardDeck();
 		try(Scanner scanner = new Scanner(System.in)) { 
@@ -34,7 +34,7 @@ public class Runner {
 			default :
 	            System.out.println("Invalid option. Please enter 1/2/3/4");
 			}
-			System.out.println("Enter your option ---->");
+			System.out.println("Enter your option ------------------------------------->");
 		}while(input > 0);
 		}
 		catch(InputMismatchException e) {

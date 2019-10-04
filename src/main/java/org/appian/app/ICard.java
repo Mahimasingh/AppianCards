@@ -2,7 +2,7 @@ package org.appian.app;
 
 /*
  *
- * Interface defines an abstract view of Card
+ * Interface defines an abstract view of Playing Card
  */
 public interface ICard {
 	

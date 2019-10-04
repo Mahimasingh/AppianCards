@@ -20,6 +20,11 @@ public class Card implements ICard {
 		return this.cardSuit;
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 * The function equals check the two playing card are equal only if their rank and suits matches.
+	 */
 	@Override
     public boolean equals(Object obj) {
 		if (obj == null) {
@@ -32,11 +37,18 @@ public class Card implements ICard {
 		return (c.getRank().equals(this.getRank()) && c.getSuit().equals(this.getSuit()));
 			
 	}
-	
+	/*
+	 * (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
 	@Override
 	public int hashCode() {
 		return Objects.hash(this.cardRank,this.cardSuit);
 	}
+	/*
+	 * (non-Javadoc)
+	 * @see org.appian.app.ICard#getStringRepresentation()
+	 */
 	@Override
 	public String getStringRepresentation() {
 		return this.cardRank.getName()+this.cardSuit.getSuitSymbol();

@@ -8,6 +8,12 @@ import java.util.Random;
 
 public class Deck implements IDeck {
 	protected List<ICard> deck;
+	/*
+	 * (non-Javadoc)
+	 * @see org.appian.app.IDeck#shuffle()
+	 * Here we are randomly shuffling the cards using Fisher-Yates shuffle algorithm.
+	 * Please read here for more information : https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+	 */
 	public void shuffle() {
 		Random random = new Random();
 		int index;
@@ -24,7 +30,11 @@ public class Deck implements IDeck {
 	    }
 		
 	}
-
+	/*
+	 * (non-Javadoc)
+	 * @see org.appian.app.IDeck#dealOneCard()
+	 * 
+	 */
 	public ICard dealOneCard() {
 		if(deck.isEmpty()) {
 			throw new  IllegalStateException("Deck of cards is empty!!");
@@ -33,7 +43,10 @@ public class Deck implements IDeck {
 		deck.remove(0);
 		return pulledCard;
 	}
-
+	/*
+	 * (non-Javadoc)
+	 * @see org.appian.app.IDeck#getCards()
+	 */
 	public List<ICard> getCards() {
 		return this.deck;
 	}
