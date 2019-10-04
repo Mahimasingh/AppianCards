@@ -19,16 +19,16 @@ public class Deck implements IDeck {
 		int index;
 		ICard tmp;
 		for (int i = deck.size()- 1; i > 0; i--)
-	    {
-	        index = random.nextInt(i + 1);
-	        if (index != i)
-	        {
-	               tmp = deck.get(index);
-	               deck.set(index, deck.get(i));
-	               deck.set(i, tmp);
-	        }
-	    }
-		
+		{
+			index = random.nextInt(i + 1);
+			if (index != i)
+			{
+				tmp = deck.get(index);
+				deck.set(index, deck.get(i));
+				deck.set(i, tmp);
+			}
+		}
+
 	}
 	/*
 	 * (non-Javadoc)

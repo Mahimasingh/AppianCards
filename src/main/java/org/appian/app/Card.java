@@ -7,7 +7,7 @@ import java.util.Objects;
 public class Card implements ICard {
 	Rank cardRank; // Refers to rank of the card
 	Suit cardSuit; // refers to suit of the card
-	
+
 	public Card(Rank rank, Suit suit) {
 		this.cardRank = rank;
 		this.cardSuit = suit;
@@ -19,23 +19,23 @@ public class Card implements ICard {
 	public Suit getSuit() {
 		return this.cardSuit;
 	}
-	
+
 	/*
 	 * (non-Javadoc)
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 * The function equals check the two playing card are equal only if their rank and suits matches.
 	 */
 	@Override
-    public boolean equals(Object obj) {
+	public boolean equals(Object obj) {
 		if (obj == null) {
 			throw new NullPointerException("Object value is null");
-        }
+		}
 		if (!Card.class.isAssignableFrom(obj.getClass())) {
-            return false;
-        }
+			return false;
+		}
 		final Card c = (Card) obj;
 		return (c.getRank().equals(this.getRank()) && c.getSuit().equals(this.getSuit()));
-			
+
 	}
 	/*
 	 * (non-Javadoc)

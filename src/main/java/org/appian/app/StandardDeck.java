@@ -18,8 +18,5 @@ public class StandardDeck extends Deck implements IDeck {
 			}
 		}
 	}
-	
-	public StandardDeck(List<ICard> cards) {
-		this.deck = cards;
-	}
+
 }

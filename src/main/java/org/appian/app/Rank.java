@@ -4,7 +4,7 @@ package org.appian.app;
  * 
  */
 public enum Rank {
-	
+
 	TWO(2,"Two"),
 	THREE(3,"Three"),
 	FOUR(4,"Four"),
@@ -18,7 +18,7 @@ public enum Rank {
 	QUEEN(12,"Queen"),
 	KING(13,"King"),
 	ACE(1,"Ace");
-	
+
 	public int getValue() {
 		return value;
 	}
@@ -29,7 +29,7 @@ public enum Rank {
 
 	private final int value; //Refers to the value of rank
 	private final String name; //Name of Rank
-	
+
 	Rank(int value, String name){
 		this.value = value;
 		this.name = name;

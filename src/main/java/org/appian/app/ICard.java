@@ -5,7 +5,7 @@ package org.appian.app;
  * Interface defines an abstract view of Playing Card
  */
 public interface ICard {
-	
+
 	/*
 	 *  @returns : Enum type Rank
 	 *  The function returns the Rank of the Card
